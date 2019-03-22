@@ -3,7 +3,7 @@ import java.util.LinkedList;
 public class MyGraph {
     private int vertexCount; //кол-во вершин
     private int edgeCount; //кол-во ребер
-    private LinkedList<Integer>[] adjLists; //массив связаных списков
+    private LinkedList<Integer>[] adjLists; //массив связных списков
 
     public MyGraph(int vertexCount){
         if (vertexCount < 0){
@@ -33,6 +33,7 @@ public class MyGraph {
         }
         adjLists[v1].add(v2);
         adjLists[v2].add(v1);
+        edgeCount++;
     }
 
     public LinkedList<Integer> adjList(int vertex){
